@@ -7,11 +7,11 @@
 FROM java:8-jre
 MAINTAINER Louis
 
-ENV VERSION 0.7.0
+ENV VERSION 0.6.4-SNAPSHOT-dev
 
 RUN apt-get install unzip
 
-ADD target/apollo-adminservice-${VERSION}-github.zip /apollo-adminservice/apollo-adminservice-${VERSION}-github.zip
+ADD apollo-adminservice-${VERSION}.zip /apollo-adminservice/apollo-adminservice-${VERSION}-github.zip
 
 RUN unzip /apollo-adminservice/apollo-adminservice-${VERSION}-github.zip -d /apollo-adminservice \
     && rm -rf /apollo-adminservice/apollo-adminservice-${VERSION}-github.zip \

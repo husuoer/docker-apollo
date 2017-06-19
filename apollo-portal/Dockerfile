@@ -7,11 +7,11 @@
 FROM java:8-jre
 MAINTAINER Louis
 
-ENV VERSION 0.7.0
+ENV VERSION 0.6.4-SNAPSHOT-dev
 
 RUN apt-get install unzip
 
-ADD target/apollo-portal-${VERSION}-github.zip /apollo-portal/apollo-portal-${VERSION}-github.zip
+ADD apollo-portal-${VERSION}.zip /apollo-portal/apollo-portal-${VERSION}-github.zip
 
 RUN unzip /apollo-portal/apollo-portal-${VERSION}-github.zip -d /apollo-portal \
     && rm -rf /apollo-portal/apollo-portal-${VERSION}-github.zip \
